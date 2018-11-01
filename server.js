@@ -1,6 +1,8 @@
 const express = require('express');
 var cors = require('cors');
 const app = express();
+const path = require('path');
+
 const findHedgieImage = require('./scraper.js');
 
 app.use(cors());
