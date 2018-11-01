@@ -9,7 +9,7 @@ app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Hedgie Fun';
 
 app.get('/', (request, response) => {
-  response.send('Oh hey Hedgeroo');
+  response.sendFile('index.html', {root: __dirname })
 });
 
 app.get('/api/v1/hedgie_images/:keyword', (request, response) => {
