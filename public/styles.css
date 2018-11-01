@@ -1,0 +1,105 @@
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  background-color: #3b4071;
+  background: linear-gradient(45deg,  #362256, #3b4071);
+  width: 80%;
+  margin: auto;
+}
+
+h1 {
+  color: #d2d5e8;
+  text-align: center;
+  padding: 15px;
+  font-size: 200%;
+}
+
+form {
+  margin-bottom: 20px;
+  background-color: #656794;
+  margin: auto;
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 690px;
+}
+
+p {
+  color: #fff;
+  width: 55%;
+  padding-right: 15px;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+#input-field,
+.submit-btn {
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+  margin-top: 8.5px;
+  margin-bottom: 8.5px;
+  font-size: 90%;
+  outline: none;
+  border: none;
+  text-align: center;
+}
+
+#input-field::placeholder {
+  color: #3b4071;
+}
+
+.submit-btn {
+  background-color: #3b4071;
+  color: #fff;
+  transition: all 0.5s;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 7.5px 35px;
+}
+
+.submit-btn:hover {
+  background-color: #362256;
+  cursor: pointer;
+}
+
+#hedgie-images {
+  margin: auto;
+  width: 700px;
+  display: grid;
+  grid-template-columns: 350px 350px;
+  grid-template-rows: 350px 350px;
+  grid-template-areas: "hedgie1 hedgie2" "hedgie3 hedgie4";
+  background-color: #EDF4F1;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+#hedgie1, #hedgie2, #hedgie3, #hedgie4 {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+
+#hedgie1 {
+  grid-area: hedgie1;
+}
+
+#hedgie2 {
+  grid-area: hedgie2;
+}
+
+#hedgie3 {
+  grid-area: hedgie3;
+}
+
+#hedgie4 {
+  grid-area: hedgie4;
+}

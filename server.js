@@ -4,13 +4,13 @@ const app = express();
 const findHedgieImage = require('./scraper.js');
 
 app.use(cors());
-// app.use(express.static(path.join(__dirname + '/public')));
+app.use(express.static(path.join(__dirname + '/public')));
 
 app.set('port', process.env.PORT || 3000);
-app.locals.title = 'Hedgie Fun';
+app.locals.title = 'Hedgehog Celebration';
 
 app.get('/', (request, response) => {
-  response.sendFile('index.html', {root: __dirname })
+  response.send('Welcome to Hedgehog Celebration!');
 });
 
 app.get('/api/v1/hedgie_images/:keyword', (request, response) => {
