@@ -4,6 +4,7 @@ const app = express();
 const findHedgieImage = require('./scraper.js');
 
 app.use(cors());
+// app.use(express.static(path.join(__dirname + '/public')));
 
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Hedgie Fun';
