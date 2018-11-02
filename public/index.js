@@ -15,7 +15,7 @@ button.addEventListener("click", function(event) {
 
 function getImages(keyword) {
   button.value = "Looking for photos..."
-  fetch(`http://localhost:3000/api/v1/hedgie_images/${keyword}`)
+  fetch(`/api/v1/hedgie_images/${keyword}`)
     .then(response => response.json())
     .then(images => updateImages(images))
     .then(() => button.value = "Get Hedgie Photos")
