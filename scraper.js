@@ -23,9 +23,8 @@ function findHedgieImage(keyword) {
       return result.slice(1, 5);
     })
     .catch(function (error) {
-      console.error('Search failed:', error);
+      alert('Search failed:', error);
     });
-
 }
 
 module.exports = findHedgieImage;
