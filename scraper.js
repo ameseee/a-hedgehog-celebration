@@ -23,7 +23,7 @@ function findHedgieImage(keyword) {
       return result.slice(1, 5);
     })
     .catch(function (error) {
-      alert('Search failed:', error);
+      console.error('Search failed:', error);
     });
 }
 
