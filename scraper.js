@@ -2,7 +2,7 @@ var Nightmare = require('nightmare');
 
 function findHedgieImage(keyword) {
   var nightmare = Nightmare();
-  console.log(keyword, "in scraper!!!");
+
   return nightmare
     .goto('https://www.google.com')
     .insert('input[title="Search"]', `hedgehog ${keyword}`)
@@ -20,7 +20,6 @@ function findHedgieImage(keyword) {
     })
     .end()
     .then(function (result) {
-      console.log(result.length, "return value in scraper");
       return result.slice(1, 5);
     })
     .catch(function (error) {

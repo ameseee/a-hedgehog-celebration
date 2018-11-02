@@ -1,11 +1,9 @@
 const express = require('express');
-var cors = require('cors');
 const app = express();
 const path = require('path');
 
 const findHedgieImage = require('./scraper.js');
 
-app.use(cors());
 app.use(express.static(path.join(__dirname + '/public')));
 
 app.set('port', process.env.PORT || 3000);
@@ -17,7 +15,6 @@ app.get('/', (request, response) => {
 
 app.get('/api/v1/hedgie_images/:keyword', (request, response) => {
   var keyword = request.params.keyword;
-  console.log(keyword, "in endpoint");
 
   async function getHedgies() {
     const hedgieImages =  await findHedgieImage(keyword);
