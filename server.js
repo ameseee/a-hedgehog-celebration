@@ -18,10 +18,10 @@ app.get('/api/v1/hedgie_images/:keyword', (request, response) => {
 
   async function getHedgies() {
     const hedgieImages =  await findHedgieImage(keyword);
-    response.json({ hedgieImages })
+    response.json({ hedgieImages });
   }
 
-  getHedgies()
+  getHedgies();
 });
 
 app.listen(app.get('port'), () => {
